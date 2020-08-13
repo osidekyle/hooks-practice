@@ -6,11 +6,11 @@ const Character =props=> {
   
   
 
-  const[isLoading,fetchedData] = useHttp('https://swapi.dev/api/people/' + props.selectedChar,[props.selectedChar])
+  const [isLoading,fetchedData] = useHttp('https://swapi.dev/api/people/' + props.selectedChar,[props.selectedChar])
   
     let loadedCharacter=null;
     if(fetchedData){
-    const loadedCharacter = {
+     loadedCharacter = {
       id: props.selectedChar,
       name: fetchedData.name,
       height: fetchedData.height,
